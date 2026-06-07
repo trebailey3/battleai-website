@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Battle AI</title>
+  <style>
+    :root {
+      --navy:   #0A0E27;
+      --card:   #0D1117;
+      --cyan:   #00B4D8;
+      --purple: #C77DFF;
+      --orange: #FF6B35;
+      --white:  #F0F4FF;
+      --gray:   #8892B0;
+      --border: #1E3A5F;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+    }
+
+    /* ── Header ── */
+    header {
+      background: linear-gradient(135deg, #050A1E 0%, #0D1B3E 100%);
+      border-bottom: 2px solid var(--cyan);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .logo-line {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+    .logo-icon {
+      width: 52px; height: 52px;
+      background: var(--card);
+      border: 2px solid var(--cyan);
+      border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+    }
+    header h1 {
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--cyan);
+      letter-spacing: 4px;
+      text-shadow: 0 0 24px rgba(0,180,216,0.45);
+    }
+    header .subtitle {
+      color: var(--purple);
+      font-size: 1rem;
+      letter-spacing: 2px;
+      margin-top: 6px;
+    }
+    header .meta {
+      margin-top: 16px;
+      color: var(--gray);
+      font-size: 0.88rem;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Sections ── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px 36px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: var(--cyan);
+      border-radius: 4px 0 0 4px;
+    }
+    .section.purple-accent::before { background: var(--purple); }
+    .section.orange-accent::before { background: var(--orange); }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--cyan);
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .section.purple-accent h2 { color: var(--purple); }
+    .section.orange-accent h2 { color: var(--orange); }
+
+    p { color: #C8D0E8; margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol {
+      margin: 10px 0 14px 24px;
+      color: #C8D0E8;
+    }
+    li { margin-bottom: 6px; }
+
+    /* ── Table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.92rem;
+    }
+    .data-table th {
+      background: #0A1628;
+      color: var(--cyan);
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .data-table td {
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      color: #C8D0E8;
+      vertical-align: top;
+    }
+    .data-table tr:nth-child(even) td { background: #080E1C; }
+
+    /* ── Highlight boxes ── */
+    .highlight {
+      background: rgba(0,180,216,0.07);
+      border: 1px solid rgba(0,180,216,0.25);
+      border-radius: 8px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      color: #C8D0E8;
+    }
+    .highlight.purple {
+      background: rgba(199,125,255,0.07);
+      border-color: rgba(199,125,255,0.25);
+    }
+
+    /* ── Contact ── */
+    .contact-box {
+      background: linear-gradient(135deg, #0A1628, #0D1B3E);
+      border: 2px solid var(--cyan);
+      border-radius: 12px;
+      padding: 32px;
+      text-align: center;
+      margin-top: 12px;
+    }
+    .contact-box h3 { color: var(--cyan); margin-bottom: 10px; font-size: 1.1rem; }
+    .contact-box a {
+      color: var(--cyan);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 32px 24px;
+      border-top: 1px solid var(--border);
+      color: var(--gray);
+      font-size: 0.85rem;
+    }
+    footer span { color: var(--cyan); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      .section { padding: 24px 20px; }
+      .data-table { font-size: 0.82rem; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-line">
+    <div class="logo-icon">⚔</div>
+    <h1>BATTLE AI</h1>
+  </div>
+  <div class="subtitle">OUTSMART THE MACHINE</div>
+  <div class="meta">Privacy Policy &nbsp;|&nbsp; Last Updated: April 13, 2026</div>
+</header>
+
+<div class="container">
+
+  <!-- Intro -->
+  <div class="section">
+    <h2>1. Introduction</h2>
+    <p>Welcome to <strong>Battle AI</strong> ("we," "our," or "us"). This Privacy Policy explains how we collect, use, and protect information when you use our mobile application <strong>Battle AI</strong> (the "App") on iOS and Android devices.</p>
+    <p>By downloading or using Battle AI, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
+    <div class="highlight">
+      <strong>The short version:</strong> Battle AI does not require you to create an account, does not collect your name or email address, and does not sell your personal data. Advertising partners and AI services may collect limited device and usage data as described below.
+    </div>
+  </div>
+
+  <!-- Information We Collect -->
+  <div class="section purple-accent">
+    <h2>2. Information We Collect</h2>
+    <p>We collect the following categories of information:</p>
+
+    <table class="data-table">
+      <tr>
+        <th>Category</th>
+        <th>What It Includes</th>
+        <th>How It's Used</th>
+      </tr>
+      <tr>
+        <td><strong>Device Information</strong></td>
+        <td>Device model, OS version, unique device identifiers (IDFA/GAID)</td>
+        <td>Ad targeting and frequency capping by advertising partners</td>
+      </tr>
+      <tr>
+        <td><strong>Usage Data</strong></td>
+        <td>Games played, session length, in-app actions</td>
+        <td>App analytics and improving gameplay experience</td>
+      </tr>
+      <tr>
+        <td><strong>Ad Interaction Data</strong></td>
+        <td>Ad views, clicks, and completion events</td>
+        <td>Ad performance measurement by advertising partners</td>
+      </tr>
+      <tr>
+        <td><strong>Game State Data</strong></td>
+        <td>Board positions or game context when you request a hint</td>
+        <td>Sent to the Claude AI API to generate a gameplay hint (not stored)</td>
+      </tr>
+      <tr>
+        <td><strong>Local Preferences</strong></td>
+        <td>Sound settings, difficulty level, high scores</td>
+        <td>Stored locally on your device only via AsyncStorage — never transmitted</td>
+      </tr>
+    </table>
+
+    <p>We do <strong>not</strong> collect your name, email address, physical location, contacts, photos, or any other sensitive personal information.</p>
+  </div>
+
+  <!-- Third-Party Services -->
+  <div class="section">
+    <h2>3. Third-Party Services</h2>
+    <p>Battle AI uses the following third-party services. Each has its own privacy policy which governs their data practices:</p>
+
+    <table class="data-table">
+      <tr>
+        <th>Service</th>
+        <th>Purpose</th>
+        <th>Privacy Policy</th>
+      </tr>
+      <tr>
+        <td><strong>Google AdMob</strong></td>
+        <td>Advertising (banner, interstitial, rewarded ads)</td>
+        <td><a href="https://policies.google.com/privacy" target="_blank" style="color:var(--cyan)">policies.google.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>AppLovin MAX</strong></td>
+        <td>Ad mediation — maximizes ad revenue across multiple networks</td>
+        <td><a href="https://www.applovin.com/privacy/" target="_blank" style="color:var(--cyan)">applovin.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Anthropic Claude API</strong></td>
+        <td>Generates AI-powered gameplay hints when requested by the user</td>
+        <td><a href="https://www.anthropic.com/privacy" target="_blank" style="color:var(--cyan)">anthropic.com/privacy</a></td>
+      </tr>
+      <tr>
+        <td><strong>Open Trivia Database</strong></td>
+        <td>Supplies trivia questions for the Trivia Challenge game</td>
+        <td><a href="https://opentdb.com" target="_blank" style="color:var(--cyan)">opentdb.com</a></td>
+      </tr>
+      <tr>
+        <td><strong>Apple App Store / Google Play</strong></td>
+        <td>App distribution and installation</td>
+        <td>Apple & Google policies apply at point of download</td>
+      </tr>
+    </table>
+
+    <div class="highlight purple">
+      <strong>About AI Hints:</strong> When you tap "Ask OVERLORD for a Hint," a description of your current game state (e.g., board position) is sent to the Anthropic Claude API to generate a hint. This data is used only to generate your hint response and is not stored by us or used to identify you.
+    </div>
+  </div>
+
+  <!-- Advertising -->
+  <div class="section orange-accent">
+    <h2>4. Advertising &amp; Ad Choices</h2>
+    <p>Battle AI is free to play and is supported by advertising. Ads may be personalized based on your device identifiers and usage patterns by our advertising partners (Google AdMob and AppLovin MAX).</p>
+    <p><strong>You can opt out of personalized advertising:</strong></p>
+    <ul>
+      <li><strong>iOS:</strong> Go to Settings → Privacy & Security → Tracking → disable "Allow Apps to Request to Track." You can also enable "Limit Ad Tracking" in Settings → Privacy → Apple Advertising.</li>
+      <li><strong>Android:</strong> Go to Settings → Google → Ads → "Delete advertising ID" or enable "Opt out of Ads Personalization."</li>
+    </ul>
+    <p>Opting out of personalized ads does not remove ads from the App — you will still see non-personalized ads.</p>
+    <p>We display the following ad formats: <strong>banner ads</strong> during gameplay, <strong>interstitial ads</strong> between games, and <strong>rewarded video ads</strong> when you choose to watch one in exchange for a gameplay hint.</p>
+  </div>
+
+  <!-- Children's Privacy -->
+  <div class="section purple-accent">
+    <h2>5. Children's Privacy (COPPA)</h2>
+    <p>Battle AI is intended for users aged <strong>13 and older</strong>. We do not knowingly collect personal information from children under the age of 13.</p>
+    <p>If you are a parent or guardian and believe your child under 13 has used Battle AI in a way that provided personal information, please contact us immediately at the address below and we will take steps to remove that information.</p>
+    <p>If you are located in the European Union, the minimum age is <strong>16</strong> unless the laws of your country specify a lower age of digital consent.</p>
+  </div>
+
+  <!-- Data Retention -->
+  <div class="section">
+    <h2>6. Data Storage &amp; Retention</h2>
+    <p>Battle AI stores your game preferences and high scores <strong>locally on your device only</strong> using AsyncStorage. This data is never transmitted to our servers.</p>
+    <p>This data is automatically deleted when you uninstall the App. We do not operate servers that store your personal data.</p>
+    <p>Data collected by third-party advertising and analytics partners is retained according to their own data retention policies (linked in Section 3 above).</p>
+  </div>
+
+  <!-- GDPR -->
+  <div class="section orange-accent">
+    <h2>7. Your Rights (GDPR &amp; CCPA)</h2>
+    <p>Depending on where you live, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right to Access:</strong> Request a copy of personal data we hold about you.</li>
+      <li><strong>Right to Deletion:</strong> Request deletion of your personal data.</li>
+      <li><strong>Right to Opt-Out:</strong> Opt out of the sale of personal data (we do not sell personal data).</li>
+      <li><strong>Right to Correction:</strong> Request correction of inaccurate data.</li>
+      <li><strong>Right to Portability:</strong> Request your data in a portable format.</li>
+    </ul>
+    <p>Since Battle AI does not collect personal data on our own servers, most personal data subject to these rights is held by our third-party advertising partners. You may exercise your rights directly with those partners using the links in Section 3, or contact us and we will assist you.</p>
+    <div class="highlight">
+      <strong>California Residents (CCPA):</strong> We do not sell your personal information. Advertising partners may share device identifiers for cross-context behavioral advertising. You may opt out as described in Section 4.
+    </div>
+  </div>
+
+  <!-- Security -->
+  <div class="section">
+    <h2>8. Security</h2>
+    <p>We take reasonable technical and organizational measures to protect the App and your data. However, no method of transmission over the internet or electronic storage is 100% secure. We encourage you to keep your device software up to date.</p>
+  </div>
+
+  <!-- Changes -->
+  <div class="section purple-accent">
+    <h2>9. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. If changes are significant, we may provide additional notice within the App.</p>
+    <p>Your continued use of Battle AI after changes are posted constitutes your acceptance of the revised Privacy Policy.</p>
+  </div>
+
+  <!-- Contact -->
+  <div class="section">
+    <h2>10. Contact Us</h2>
+    <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:</p>
+    <div class="contact-box">
+      <h3>⚔ Battle AI — Privacy Inquiries</h3>
+      <p style="color:var(--gray); margin-bottom:10px;">Developer: Tony Bailey</p>
+      <p><a href="mailto:trebailey3@gmail.com">trebailey3@gmail.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 <span>Battle AI</span>. All rights reserved.</p>
+  <p style="margin-top:6px;">This privacy policy was last updated on <span>April 13, 2026</span>.</p>
+</footer>
+
+</body>
+</html>
